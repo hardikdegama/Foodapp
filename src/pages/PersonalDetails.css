@@ -1,0 +1,118 @@
+/* PersonalDetails.css */
+
+/* Full-page container */
+.full-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Wrapper to align photo and info side by side */
+  .personal-details-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* 80% of screen width */
+    max-width: 1200px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Make sure it wraps on smaller screens */
+  }
+  
+  /* Left side: Profile photo */
+  .profile-photo-container {
+    flex: 0 0 30%; /* Take up 30% of space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for profile photo */
+  .profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Right side: Information table */
+  .info-table-container {
+    flex: 1; /* Take up the remaining space */
+    padding-left: 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .info-table th, .info-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .info-table th {
+    width: 120px;
+    font-weight: 500;
+    color: #007BFF;
+  }
+  
+  .info-table td {
+    color: #555;
+  }
+  
+  .info-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .info-table tr:last-child {
+    border-bottom: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .personal-details-wrapper {
+      flex-direction: column;
+      align-items: center;
+      width: 90%; /* Take up 90% of screen width on small screens */
+    }
+  
+    .profile-photo-container {
+      margin-bottom: 20px; /* Space between photo and info on small screens */
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .info-table th {
+      font-size: 14px;
+    }
+  
+    .info-table td {
+      font-size: 14px;
+    }
+  }
+  
